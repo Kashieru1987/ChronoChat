@@ -27,6 +27,21 @@
         <artifactId>smack-extensions</artifactId>
         <version>4.4.0</version>
     </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-core</artifactId>
+        <version>4.4.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-omemo</artifactId>
+        <version>4.4.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.igniterealtime.smack</groupId>
+        <artifactId>smack-sasl-provided</artifactId>
+        <version>4.4.0</version>
+    </dependency>
   </dependencies>
 
 </project>
