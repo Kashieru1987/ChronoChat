@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import xyz.chronoziel.chronochat.GeneralConstants;
 
 public class User {
@@ -32,26 +33,16 @@ public class User {
 
 	public static User getTestUser() {
 
-		final String directory = GeneralConstants.ACCOUNT_INFO_DIRECTORY;
-		final String filename = GeneralConstants.ACCOUNT_INFO_FILENAME;
+		final Dotenv dotenv = Dotenv.load();
+		
+		final String username = dotenv.get("USERNAME");
+		final String password = dotenv.get("PASSWORD");
+		final String host = dotenv.get("HOST");
 
-		final File file = new File(directory + filename);
+		final User user = new User(username, password, host);
 
-		try(Scanner scanner = new Scanner(file)) {
+		return user;
 
-			final String username = scanner.nextLine();
-			final String password = scanner.nextLine();
-			final String host = scanner.nextLine();
-
-			final User user = new User(username, password, host);
-
-			return user;
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-
-		return null;
 	}
 
 
