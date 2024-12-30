@@ -3,6 +3,7 @@ package xyz.chronoziel.chronochat.stage;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class ChronoApp extends Application {
@@ -21,8 +22,12 @@ public class ChronoApp extends Application {
 		Group root = new Group();
 		Scene scene = this.createScene(root);
 
+		root.getChildren().add(new Text("AAAAAAAAAAAA"));
+
 		stage.setTitle(StageConstants.TITLE);
 		stage.setScene(scene);
+		stage.setWidth(1600);
+		stage.setHeight(900);
 		stage.setMaximized(true);
 		stage.show();
 	}
