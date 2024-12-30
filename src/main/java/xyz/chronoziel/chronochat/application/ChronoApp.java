@@ -1,6 +1,7 @@
-package xyz.chronoziel.chronochat.stage;
+package xyz.chronoziel.chronochat.application;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
@@ -11,20 +12,25 @@ public class ChronoApp extends Application {
 	public ChronoApp() {
 	}
 
-	@Override
-	public void start(Stage stage) throws Exception {
+	@Override 
+	public void init() {
+		Platform.setImplicitExit(false); //allows me to not use the provided stage
+	}
 
-		this.initStage(stage);
+	@Override
+	public void start(Stage unused) throws Exception {
+
+//		this.initStage(stage);
 
 	}
 
-	public void initStage(Stage stage) {
+	private void initStage(Stage stage) {
 		Group root = new Group();
 		Scene scene = this.createScene(root);
 
 		root.getChildren().add(new Text("AAAAAAAAAAAA"));
 
-		stage.setTitle(StageConstants.TITLE);
+		stage.setTitle(ApplicationConstants.TITLE);
 		stage.setScene(scene);
 		stage.setWidth(1600);
 		stage.setHeight(900);
@@ -32,10 +38,10 @@ public class ChronoApp extends Application {
 		stage.show();
 	}
 
-	public Scene createScene(Group root) {
+	private Scene createScene(Group root) {
 		Scene outputScene = new Scene(root);
 
-		outputScene.setFill(StageConstants.SCENE_FILL);
+		outputScene.setFill(ApplicationConstants.SCENE_FILL);
 
 		return outputScene;
 	}

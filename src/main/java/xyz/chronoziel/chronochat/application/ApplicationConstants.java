@@ -1,10 +1,10 @@
-package xyz.chronoziel.chronochat.stage;
+package xyz.chronoziel.chronochat.application;
 
 import javafx.scene.paint.Color;
 
-public class StageConstants {
+public class ApplicationConstants {
 
-	private StageConstants() {
+	private ApplicationConstants() {
 	}
 
 	public static final String TITLE = "ChronoChat";

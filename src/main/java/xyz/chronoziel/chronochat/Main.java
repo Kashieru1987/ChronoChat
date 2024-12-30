@@ -1,6 +1,6 @@
 package xyz.chronoziel.chronochat;
 
-import xyz.chronoziel.chronochat.stage.ChronoApp;
+import xyz.chronoziel.chronochat.application.ChronoApp;
 
 public class Main {
 
