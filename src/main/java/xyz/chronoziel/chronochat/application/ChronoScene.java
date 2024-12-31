@@ -1,17 +1,16 @@
 package xyz.chronoziel.chronochat.application;
 
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 
 public class ChronoScene extends Scene {
 
-	public ChronoScene(Parent root) {
+	public ChronoScene(Pane root) {
 		super(root);
-
 		this.initChronoScene();
 	}
 
-	public void initChronoScene() {
+	private void initChronoScene() {
 		this.setFill(ApplicationConstants.SCENE_FILL);
 	}
 
