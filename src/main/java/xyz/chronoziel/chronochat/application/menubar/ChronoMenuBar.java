@@ -20,9 +20,8 @@ public class ChronoMenuBar extends MenuBar {
 			Menu mainMenu = new Menu("ChronoChat");
 			List<MenuItem> menuItems = mainMenu.getItems();
 
-			MenuItem startOrJoinChat = new MenuItem("Start/Join Chat");
-			startOrJoinChat.setOnAction(actionevent -> {
-				
+			ChronoMenuItem startOrJoinChat = new ChronoMenuItem("Start/Join Chat", event -> {
+				System.out.println("button pressed :3");
 			});
 
 			menuItems.add(startOrJoinChat);

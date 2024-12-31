@@ -16,7 +16,9 @@ public class ChronoApp extends Application {
 
 	@Override
 	public void start(Stage unused) throws Exception {
-		ChronoStage stage = new ChronoStage();
+
+		Platform.runLater(ChronoStage::new);
+
 	}
 
 	/**

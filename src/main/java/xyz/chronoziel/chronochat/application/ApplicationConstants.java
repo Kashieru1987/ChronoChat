@@ -12,6 +12,6 @@ public class ApplicationConstants {
 	public static final String TITLE = "ChronoChat";
 	public static final Dimension SIZE = new Dimension(1600, 900);
 
-	public static final Color SCENE_FILL = Color.GRAY;
+	public static final String COLOR = "#333333";
 
 }

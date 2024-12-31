@@ -5,8 +5,10 @@ import java.util.List;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
+import xyz.chronoziel.chronochat.application.ApplicationConstants;
 import xyz.chronoziel.chronochat.application.ChronoScene;
 import xyz.chronoziel.chronochat.application.menubar.ChronoMenuBar;
+import xyz.chronoziel.chronochat.application.util.ElementUtil;
 
 public class AppElements {
 
@@ -18,6 +20,8 @@ public class AppElements {
 
 	private AppElements() {
 		root = new VBox();
+		ElementUtil.setNodeColor(root, ApplicationConstants.COLOR);
+
 		menuBar = new ChronoMenuBar();
 		scene = new ChronoScene(root);
 
