@@ -1,12 +1,8 @@
 package xyz.chronoziel.chronochat;
 
-import xyz.chronoziel.chronochat.application.ChronoApp;
-
 public class Main {
 
 	public Main() throws Exception {
-
-		ChronoApp.launchApp();
 
 	}
 
